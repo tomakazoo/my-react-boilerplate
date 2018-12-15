@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tomislavb <tomislavb@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomakazoo/my-react-boilerplate.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/tomakazoo/my-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/tomakazoo/my-react-boilerplate#readme"
 }
