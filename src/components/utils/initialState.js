@@ -36,5 +36,6 @@ export default {
       uti: "dLoBWdPXME-9_CXhzhwPAA",
       ver: "1.0"
     }
-  }
+  },
+  apiCallsInProgress: 0
 };

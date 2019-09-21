@@ -7,6 +7,6 @@ class Message extends Component {
   }
 }
 Message.propTypes = {
-  message: PropTypes.object.isRequired
+  message: PropTypes.string.isRequired
 };
 export default Message;

@@ -37,3 +37,41 @@ img {
 .warning {
   color: red;
 }
+ul {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  list-style: none;
+}
+ul.completed li::before,
+ul.failed li::before,
+ul.pending li::before,
+ul.inprogress li::before,
+ul.success li::before {
+  content: "•";
+  display: inline-block;
+  width: 1.1em;
+  margin-left: -1em;
+  line-height: 3px;
+  font-size: 45px;
+  padding-left: 24px;
+  vertical-align: middle;
+}
+ul.success li::before {
+  color: green;
+}
+ul.failed li::before {
+  color: red;
+}
+ul.inprogress li::before {
+  color: #f4a041;
+}
+ul.pending li::before {
+  color: pink;
+}
+ul.completed li::before {
+  color: blue;
+}
+.material-icons {
+  font-size: 50px;
+  margin-right: 7px;
+}

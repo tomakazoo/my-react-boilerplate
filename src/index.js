@@ -5,7 +5,7 @@ import "./styles.css";
 import DefaultErrorBoundary from "./DefaultErrorBoundary";
 import createStore from "./store";
 import { Provider } from "react-redux";
-import AppRoutes from "./routes/routes";
+import AppRoutes from "./routes/AppRoutes";
 
 const store = createStore;
 const routingComponents = (

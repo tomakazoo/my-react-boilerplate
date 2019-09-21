@@ -36,6 +36,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      title: "React Bootstrap Portal",
       favicon: "./src/favicon.png",
       chunks: ["adminapp", "config"]
     }),

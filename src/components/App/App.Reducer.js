@@ -8,6 +8,16 @@ export default function appReducer(state = initialState.app, action) {
         ...state,
         isMenuHidden: action.payload
       };
+    case Types.FINPL_GET_PROCESS_CHART_STATUSES_SUCCESS:
+      return {
+        ...state,
+        statuses: [...action.statuses.data]
+      };
+    case Types.FINPL_GET_PROCESS_JOB_DETAILS_SUCCESS:
+      return {
+        ...state,
+        interfaces: [...action.interfaces.data]
+      };
   }
   return state;
 }

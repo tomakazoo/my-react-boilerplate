@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --open --config webpack.config.dev.js",
     "dev:hot": "npm run dev -- --hot",
     "test": "jest",
     "format": "pretty-quick",
@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+      "pre-commit": "pretty-quick --staged && npm run lint"
     }
   },
   "repository": {
@@ -57,13 +57,13 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
-    "axios": "^0.18.1",
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/icons": "^4.2.0",
+    "@material-ui/pickers": "^3.0.0",
+    "axios": "^0.18.0",
     "clsx": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "material-table": "^1.40.0",
-    "mui-datatables": "^2.2.0",
     "moment": "^2.24.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
@@ -73,7 +73,9 @@
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
+    "recharts": "^1.6.2",
     "recompose": "^0.30.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "superagent": "^5.0.8"
   }
 }

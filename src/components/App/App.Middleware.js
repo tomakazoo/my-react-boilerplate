@@ -1,24 +1,24 @@
-import * as Types from "./FinPLDashboard.ActionTypes";
+import * as Types from "./App.ActionTypes";
 import { getDataDispatchFunction } from "../utils/httpClient";
 import {
-  getFinPLDashboardStatusesSuccess,
+  getFinPLChartStatusesSuccess,
   getFinPLJobDetailsSuccess
-} from "./FinPLDashboard.ActionCreators";
+} from "./App.ActionCreators";
 
 const {
   API_HOST,
-  FINPLDASHBOARD_CURRENT_STATUSES,
+  FINPLDASHBOARD_STATUSES,
   FINPLDASHBOARD_JOB_DETAILS
 } = __ENVIRONMENT_CONFIG__; // eslint-disable-line
 
-const finplDashboardMiddleware = () => next => action => {
+const appMiddleware = () => next => action => {
   if (!action) {
     return;
   }
   switch (action.type) {
-    case Types.FINPL_GET_PROCESS_STATUSES: {
-      const uri = `${API_HOST}${FINPLDASHBOARD_CURRENT_STATUSES}`;
-      getDataDispatchFunction(uri, getFinPLDashboardStatusesSuccess)(next);
+    case Types.FINPL_GET_PROCESS_CHART_STATUSES: {
+      const uri = `${API_HOST}${FINPLDASHBOARD_STATUSES}`;
+      getDataDispatchFunction(uri, getFinPLChartStatusesSuccess)(next);
       break;
     }
     case Types.FINPL_GET_PROCESS_JOB_DETAILS: {
@@ -30,4 +30,4 @@ const finplDashboardMiddleware = () => next => action => {
   next(action);
 };
 
-export default finplDashboardMiddleware;
+export default appMiddleware;
