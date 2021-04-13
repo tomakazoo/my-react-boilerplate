@@ -67,7 +67,7 @@
     "moment": "^2.24.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
-    "react-adal": "^0.4.23",
+    "react-adal": "^0.5.1",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.4",
     "react-redux": "^7.0.3",
